@@ -12,7 +12,7 @@ def round_to_100ths(number):
     return float(text)
 
 
-def fix_rounding(money_add, bonus_amt):
+def fix_rounding(money_add: float, bonus_amt: float) -> float:
     ''' deals with edge case where rounding makes total
     money added less than the amount required to earn
     the bonus by adding the difference (never more than 3 cents)
@@ -21,8 +21,8 @@ def fix_rounding(money_add, bonus_amt):
     for money in money_add:
         total += money
     if total < bonus_amt:
-        differnce = bonus_amt - total
-        money_add[0] = money_add[0] + differnce
+        difference = bonus_amt - total
+        money_add[0] = money_add[0] + difference
     return money_add
 
 
