@@ -12,6 +12,11 @@ def round_to_100ths(number):
     return float(text)
 
 
+def round_to_whole(number):
+    text = f'{number:.0f}'
+    return float(text)
+
+
 def fix_rounding(money_add: float, bonus_amt: float) -> float:
     ''' deals with edge case where rounding makes total
     money added less than the amount required to earn
@@ -74,7 +79,7 @@ def print_results(xander_add, madison_add, tristan_add):
     print(f'Tristan needs: ${tristan_add:.2f}')
 
 
-BONUS = 52.50
+BONUS = 53.00
 
 
 def main():
@@ -85,7 +90,7 @@ def main():
     money_list = [xander_current, madison_current, tristan_current]
     money_list = calc_add(money_list, BONUS)
     money_list = fix_negative(money_list, BONUS)
-    money_list = [round_to_100ths(i) for i in money_list]
+    money_list = [round_to_whole(i) for i in money_list]
     fixed_tuple = tuple(fix_rounding(money_list, BONUS))
     xander_add, madison_add, tristan_add = fixed_tuple
     print_results(xander_add, madison_add, tristan_add)
