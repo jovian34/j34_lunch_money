@@ -8,20 +8,30 @@ def calc_add(money, bonus_amt):
 
 
 def round_to_100ths(number):
+    """
+    No longer used as website now requires whole numbers
+    :param number:
+    :return: float
+    """
     text = f'{number:.2f}'
     return float(text)
 
 
 def round_to_whole(number):
+    """
+    rounds to whole numbers but still outputs as a float
+    :param number: float
+    :return: float
+    """
     text = f'{number:.0f}'
     return float(text)
 
 
 def fix_rounding(money_add: float, bonus_amt: float) -> float:
-    ''' deals with edge case where rounding makes total
+    """ deals with edge case where rounding makes total
     money added less than the amount required to earn
     the bonus by adding the difference (never more than 3 cents)
-    to Xander's total.'''
+    to Xander's total."""
     total = 0
     for money in money_add:
         total += money
