@@ -3,8 +3,8 @@ def calc_add(money, bonus_amt):
     xander = xander / 3
     new_total = xander + money[0]
     tristan = new_total - money[2]
-    madison = new_total - money[1]
-    return [xander, madison, tristan]
+    michael = new_total - money[1]
+    return [xander, michael, tristan]
 
 
 def round_to_100ths(number):
@@ -53,11 +53,11 @@ def xander_input():
     xander_current = float(xander_current) + float(xander_bonus)
 
 
-def madison_input():
-    global madison_current
-    madison_current = input('How much does Madison have now? ')
-    madison_bonus = input('How much bonus? ')
-    madison_current = float(madison_current) + float(madison_bonus)
+def michael_input():
+    global michael_current
+    michael_current = input('How much does Michael have now? ')
+    michael_bonus = input('How much bonus? ')
+    michael_current = float(michael_current) + float(michael_bonus)
 
 
 def tristan_input():
@@ -67,10 +67,10 @@ def tristan_input():
     tristan_current = float(tristan_current) + float(tristan_bonus)
 
 
-def print_results(xander_add, madison_add, tristan_add):
+def print_results(xander_add, michael_add, tristan_add):
     print('===================================')
     print(f'Xander needs: ${xander_add:.2f}')
-    print(f'Madison needs: ${madison_add:.2f}')
+    print(f'Michael needs: ${michael_add:.2f}')
     print(f'Tristan needs: ${tristan_add:.2f}')
 
 
@@ -79,7 +79,7 @@ BONUS = 52.50
 
 def main():
     xander_input()
-    madison_input()
+    michael_input()
     tristan_input()
 
     money_list = [xander_current, madison_current, tristan_current]
