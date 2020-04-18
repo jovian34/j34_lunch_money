@@ -82,7 +82,7 @@ def main():
     michael_input()
     tristan_input()
 
-    money_list = [xander_current, madison_current, tristan_current]
+    money_list = [xander_current, michael_current, tristan_current]
     money_list = calc_add(money_list, BONUS)
     money_list = fix_negative(money_list, BONUS)
     money_list = [round_to_100ths(i) for i in money_list]
