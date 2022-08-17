@@ -13,6 +13,9 @@ def round_to_100ths(number):
 
 
 def blank_float(value: str):
+    '''
+    This converts any non-numerical entry like a blank return to be processed as a zero float value
+    '''
     try:
         output = float(value)
     except(ValueError):
