@@ -12,6 +12,14 @@ def round_to_100ths(number):
     return float(text)
 
 
+def blank_float(value: str):
+    try:
+        output = float(value)
+    except(ValueError):
+        output = 0.0
+    return output
+
+
 def fix_rounding(money_add: float, bonus_amt: float) -> float:
     ''' deals with edge case where rounding makes total
     money added less than the amount required to earn
@@ -50,21 +58,21 @@ def xander_input():
     global xander_current
     xander_current = input('How much does Xander have now? ')
     xander_bonus = input('How much bonus? ')
-    xander_current = float(xander_current) + float(xander_bonus)
+    xander_current = blank_float(xander_current) + blank_float(xander_bonus)
 
 
 def pierre_input():
     global pierre_current
     pierre_current = input('How much does Pierre have now? ')
     pierre_bonus = input('How much bonus? ')
-    pierre_current = float(pierre_current) + float(pierre_bonus)
+    pierre_current = blank_float(pierre_current) + blank_float(pierre_bonus)
 
 
 def tristan_input():
     global tristan_current
     tristan_current = input('How much does Tristan have now? ')
     tristan_bonus = input('How much bonus?')
-    tristan_current = float(tristan_current) + float(tristan_bonus)
+    tristan_current = blank_float(tristan_current) + blank_float(tristan_bonus)
 
 
 def print_results(xander_add, pierre_add, tristan_add):
