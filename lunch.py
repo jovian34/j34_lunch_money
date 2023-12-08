@@ -1,3 +1,20 @@
+import logging
+
+
+def lunch_log():
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format="%(asctime)s %(levelname)s %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        filename="lunch.log",
+    )
+
+    logging.debug("Debug")
+    logging.info("Info")
+    logging.warning("Warning")
+    logging.error("Error")
+    logging.critical("Critical")
+
 def calc_add(money, bonus_amt):
     xander = BONUS + money[2] + money[1] - 2 * money[0]
     xander = xander / 3
@@ -89,6 +106,7 @@ BONUS = 52.50
 
 
 def main():
+    lunch_log()
     xander_input()
     pierre_input()
     tristan_input()
