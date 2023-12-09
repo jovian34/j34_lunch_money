@@ -1,5 +1,3 @@
-2023-12-08 12:46:31 DEBUG Debug
-2023-12-08 12:46:31 INFO Info
-2023-12-08 12:46:31 WARNING Warning
-2023-12-08 12:46:31 ERROR Error
-2023-12-08 12:46:31 CRITICAL Critical
+
+2023-12-08 20:39:18 ERROR User entered a non-numeric value
+2023-12-08 20:39:22 ERROR User entered a non-numeric value

@@ -9,12 +9,6 @@ def lunch_log():
         filename="lunch.log",
     )
 
-    logging.debug("Debug")
-    logging.info("Info")
-    logging.warning("Warning")
-    logging.error("Error")
-    logging.critical("Critical")
-
 def calc_add(money, bonus_amt):
     xander = BONUS + money[2] + money[1] - 2 * money[0]
     xander = xander / 3
@@ -36,6 +30,7 @@ def blank_float(value: str):
     try:
         output = float(value)
     except(ValueError):
+        logging.error("User entered a non-numeric value")
         output = 0.0
     return output
 
